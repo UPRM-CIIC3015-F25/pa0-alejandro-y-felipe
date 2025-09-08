@@ -12,10 +12,13 @@ def ball_movement():
 
     # Start the ball movement when the game begins
     # TODO Task 5 Create a Merge Conflict
-    speed = 7
     if start:
-        ball_speed_x = speed * random.choice((1, -1))  # Randomize initial horizontal direction
-        ball_speed_y = speed * random.choice((1, -1))  # Randomize initial vertical direction
+
+        ball_speed_x = 7 * random.choice((1, -1))  # Randomize initial horizontal direction
+        ball_speed_y = 7 * random.choice((1, -1))
+
+        ball_speed_x = 10 * random.choice((1, -1))
+        ball_speed_y = 10 * random.choice ((1, -1))# Randomize initial vertical direction
         start = False
 
     # Ball collision with the player paddle
@@ -81,7 +84,7 @@ bg_color = pygame.Color('grey12')
 ball = pygame.Rect(screen_width / 2 - 15, screen_height / 2 - 15, 30, 30)  # Ball (centered)
 # TODO Task 1 Make the paddle bigger
 player_height = 15
-player_width = 100
+player_width = 150
 player = pygame.Rect(screen_width/2 - 45, screen_height - 20, player_width, player_height)  # Player paddle
 
 # Game Variables
@@ -99,7 +102,7 @@ start = False  # Indicates if the game has started
 while True:
     # Event handling
     # TODO Task 4: Add your name
-    name = "John Doe"
+    name = "Alejandro"
     for event in pygame.event.get():
         if event.type == pygame.QUIT:  # Quit the game
             pygame.quit()
